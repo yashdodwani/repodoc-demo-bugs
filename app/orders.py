@@ -1,8 +1,9 @@
 """Order processing and pricing calculations."""
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Any
 
 
-def get_recent_orders(orders: List[Dict[str, Any]], limit: int) -> List[Dict[str, Any]]:
+def get_recent_orders(
+    orders: List[Dict[str, Any]], limit: int) -> List[Dict[str, Any]]:
     """Return the first `limit` recent orders.
 
     Logic Bug B4: Off-by-one slice error. Returns `limit - 1` items instead of `limit`.
